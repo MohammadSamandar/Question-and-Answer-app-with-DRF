@@ -1,0 +1,64 @@
+{% load static %}
+{% load render_partial %}
+<!DOCTYPE html>
+<html lang="zxx" class="no-js">
+
+<head>
+	<!-- Mobile Specific Meta -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<!-- meta character set -->
+	<meta charset="UTF-8">
+	<!-- Favicon-->
+	<link rel="shortcut icon" href="img/fav.png">
+
+
+{#	<!-- Author Meta -->#}
+{#	<meta name="author" content="CodePixar">#}
+{#	<!-- Meta Description -->#}
+{#	<meta name="description" content="">#}
+{#	<!-- Meta Keyword -->#}
+{#	<meta name="keywords" content="">#}
+{#	#}
+
+    {% block meta %}{% endblock %}
+	<!-- Site Title -->
+	<title>
+        {% block title %}
+
+        {% endblock %}
+    </title>
+
+
+	<!-- start header References -->
+    {% include 'header_references.html' %}
+	<!-- End header References -->
+
+
+</head>
+
+<body>
+
+	<!-- Start Header Area -->
+    {% render_partial 'main_page.views.header_component' %}
+	<!-- End Header Area -->
+
+
+
+    {% block content %}
+
+    {% endblock %}
+
+
+	<!-- start footer Area -->
+    {% render_partial 'main_page.views.footer_component' %}
+	<!-- End footer Area -->
+
+
+
+    <!-- start footer References -->
+    {% include 'footer_references.html' %}
+	<!-- End footer References -->
+
+</body>
+
+</html>
